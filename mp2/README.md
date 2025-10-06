@@ -1,46 +1,117 @@
-# Getting Started with Create React App
+# Pokemon Explorer
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A React application that allows users to explore Pokemon data using the Pokemon API. This app demonstrates modern React development with TypeScript, routing, and API integration.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+### 🔍 Search View
+- **Search Functionality**: Real-time search as you type
+- **Sorting Options**: Sort by name, ID, height, or weight (ascending/descending)
+- **Pokemon Cards**: Display Pokemon with images, names, and types
+- **Responsive Design**: Works on desktop and mobile devices
 
-### `npm start`
+### 🖼️ Gallery View
+- **Visual Gallery**: Browse Pokemon with high-quality artwork
+- **Type Filtering**: Filter Pokemon by their types (fire, water, grass, etc.)
+- **Select All/Clear All**: Quick filter management
+- **Grid Layout**: Responsive grid that adapts to screen size
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### 📋 Detail View
+- **Comprehensive Information**: View detailed Pokemon stats and abilities
+- **Navigation**: Previous/Next buttons to browse through Pokemon
+- **URL Routing**: Direct links to specific Pokemon (e.g., `/pokemon/25`)
+- **Visual Stats**: Animated stat bars with color coding
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Technical Implementation
 
-### `npm test`
+### 🛠️ Technologies Used
+- **React 19** with TypeScript
+- **React Router** for client-side routing
+- **Axios** for API calls
+- **CSS3** with modern features (Grid, Flexbox, animations)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 🏗️ Architecture
+- **Component-based**: Modular, reusable components
+- **Type Safety**: Full TypeScript implementation
+- **Error Handling**: Graceful fallbacks and loading states
+- **API Integration**: Pokemon API with mock data fallback
 
-### `npm run build`
+### 🎨 Design Features
+- **Modern UI**: Clean, professional design
+- **Responsive**: Mobile-first approach
+- **Accessibility**: Semantic HTML and keyboard navigation
+- **Animations**: Smooth transitions and hover effects
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Getting Started
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Prerequisites
+- Node.js (v14 or higher)
+- npm or yarn
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Installation
+```bash
+npm install
+```
 
-### `npm run eject`
+### Development
+```bash
+npm start
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Build for Production
+```bash
+npm run build
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## API Integration
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+The app uses the [Pokemon API](https://pokeapi.co/) which is:
+- ✅ Free to use
+- ✅ No API key required
+- ✅ Comprehensive Pokemon data
+- ✅ High-quality images
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### Fallback Strategy
+If the API is unavailable, the app includes mock data to ensure functionality continues.
 
-## Learn More
+## Project Structure
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```
+src/
+├── components/          # React components
+│   ├── PokemonList.tsx     # Search and list view
+│   ├── PokemonGallery.tsx  # Gallery view with filtering
+│   ├── PokemonDetail.tsx   # Detailed Pokemon view
+│   └── *.css              # Component styles
+├── services/           # API integration
+│   └── pokemonApi.ts      # Pokemon API calls
+├── types/             # TypeScript definitions
+│   └── pokemon.ts         # Pokemon data interfaces
+├── App.tsx            # Main app component with routing
+└── index.tsx          # App entry point
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Features Demonstrated
+
+### ✅ Requirements Met
+- [x] **List View**: Search with real-time filtering and sorting
+- [x] **Gallery View**: Visual gallery with type filtering
+- [x] **Detail View**: Comprehensive Pokemon information with navigation
+- [x] **React Router**: Client-side routing with URL parameters
+- [x] **Axios**: HTTP requests for API integration
+- [x] **TypeScript**: Full type safety throughout the application
+
+### 🎯 Additional Features
+- **Responsive Design**: Works on all device sizes
+- **Loading States**: User feedback during API calls
+- **Error Handling**: Graceful error management
+- **Modern UI**: Professional, accessible design
+- **Performance**: Optimized rendering and API calls
+
+## Deployment
+
+The app is configured for GitHub Pages deployment with the correct basename (`/mp2`) for routing to work properly.
+
+## License
+
+This project is for educational purposes as part of CS409 coursework.

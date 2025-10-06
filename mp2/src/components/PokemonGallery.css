@@ -1,0 +1,227 @@
+.pokemon-gallery-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.gallery-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.gallery-header h1 {
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.gallery-description {
+  color: #666;
+  font-size: 16px;
+}
+
+.filter-section {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+}
+
+.filter-controls h3 {
+  color: #2c3e50;
+  margin-bottom: 15px;
+}
+
+.filter-buttons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.filter-btn {
+  padding: 8px 16px;
+  border: 2px solid #e0e0e0;
+  background: white;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.filter-btn:hover {
+  border-color: #3498db;
+  background: #f8f9fa;
+}
+
+.filter-btn.select-all {
+  background: #27ae60;
+  color: white;
+  border-color: #27ae60;
+}
+
+.filter-btn.clear-all {
+  background: #e74c3c;
+  color: white;
+  border-color: #e74c3c;
+}
+
+.type-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.type-filter-btn {
+  padding: 8px 16px;
+  border: 2px solid #e0e0e0;
+  background: white;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.type-filter-btn:hover {
+  border-color: #3498db;
+  background: #f8f9fa;
+}
+
+.type-filter-btn.selected {
+  background: #3498db;
+  color: white;
+  border-color: #3498db;
+}
+
+.gallery-results {
+  margin-top: 30px;
+}
+
+.results-count {
+  color: #666;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.gallery-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-decoration: none;
+  color: inherit;
+  overflow: hidden;
+}
+
+.gallery-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card-image-container {
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.gallery-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  max-width: 180px;
+}
+
+.card-info {
+  padding: 16px;
+}
+
+.card-name {
+  margin: 0 0 12px 0;
+  color: #2c3e50;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.card-types {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.type-badge {
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: capitalize;
+  color: white;
+}
+
+.type-grass { background: #78c850; }
+.type-poison { background: #a040a0; }
+.type-fire { background: #f08030; }
+.type-water { background: #6890f0; }
+.type-electric { background: #f8d030; }
+.type-ice { background: #98d8d8; }
+.type-fighting { background: #c03028; }
+.type-ground { background: #e0c068; }
+.type-flying { background: #a890f0; }
+.type-psychic { background: #f85888; }
+.type-bug { background: #a8b820; }
+.type-rock { background: #b8a038; }
+.type-ghost { background: #705898; }
+.type-dragon { background: #7038f8; }
+.type-dark { background: #705848; }
+.type-steel { background: #b8b8d0; }
+.type-fairy { background: #f0b6bc; }
+
+.loading-container, .error-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  text-align: center;
+}
+
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #3498db;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 20px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.error-message {
+  color: #e74c3c;
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+.error-container button {
+  padding: 10px 20px;
+  background: #3498db;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.error-container button:hover {
+  background: #2980b9;
+}
